@@ -4,7 +4,7 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iga2n"]
 
-[node name="platform_short_small" type="Area3D"]
+[node name="platform_short_small" type="StaticBody3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
