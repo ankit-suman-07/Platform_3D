@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://r3bon2ohl2b7"]
+[gd_scene load_steps=10 format=3 uid="uid://r3bon2ohl2b7"]
 
 [ext_resource type="PackedScene" uid="uid://droalic5tmyms" path="res://scenes/start_floor.tscn" id="1_nnsk1"]
 [ext_resource type="PackedScene" uid="uid://odv15aey0ywm" path="res://scenes/player.tscn" id="2_rwgxs"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ftc6nrelfs1y" path="res://scenes/platform_short_small.tscn" id="5_qfnet"]
 [ext_resource type="PackedScene" uid="uid://0gogofnjqkjg" path="res://scenes/measure.tscn" id="6_qfnet"]
 [ext_resource type="PackedScene" uid="uid://cfdjl2p08e0nq" path="res://scenes/platform.tscn" id="7_i7141"]
+[ext_resource type="PackedScene" uid="uid://cokt2agl22d2d" path="res://scenes/moving_platform.tscn" id="9_7r4gi"]
 
 [node name="World" type="Node3D"]
 
@@ -15,7 +16,7 @@
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 16.352, -10.0209, 0)
 
 [node name="player" parent="." instance=ExtResource("2_rwgxs")]
-transform = Transform3D(-4.3068e-08, 0.170949, -0.98528, 7.47242e-09, 0.98528, 0.170949, 1, 0, -4.37114e-08, 37.965, 2.29823, 0)
+transform = Transform3D(-4.3068e-08, 0.170949, -0.98528, 7.47242e-09, 0.98528, 0.170949, 1, 0, -4.37114e-08, 169.853, 2.29823, -7.79369)
 
 [node name="Camera3D" type="Camera3D" parent="player"]
 transform = Transform3D(1, -2.73915e-08, -9.64688e-09, 2.73915e-08, 0.779305, 0.626644, -9.64689e-09, -0.626644, 0.779305, 1.29526e-08, 2.88028, 2.32998)
@@ -25,7 +26,7 @@ near = 1.0
 transform = Transform3D(0.999667, -0.00169484, 0.0257549, -0.0258106, -0.0656425, 0.997509, -6.11648e-09, -0.997842, -0.0656644, 55.8116, 27.5617, 0)
 
 [node name="measure" parent="." instance=ExtResource("6_qfnet")]
-transform = Transform3D(2, 0, 0, 0, 0.5, 0, 0, 0, 2, 161.712, 0, -7.02127)
+transform = Transform3D(2, 0, 0, 0, 0.5, 0, 0, 0, 2, 177.417, 0, 9.98176)
 
 [node name="platforms" type="Node" parent="."]
 
@@ -67,6 +68,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 158.723, -1.79428, -6.00779)
 
 [node name="platform_large13" parent="platforms" instance=ExtResource("3_4wyf3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 164.748, -1.79428, -8.09489)
+
+[node name="platform_large14" parent="platforms" instance=ExtResource("3_4wyf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 179.997, -1.79428, 13.196)
+
+[node name="platform_large15" parent="platforms" instance=ExtResource("3_4wyf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 186.101, -1.79428, 11.1483)
+
+[node name="platform_large16" parent="platforms" instance=ExtResource("3_4wyf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 192.132, -1.79428, 9.12382)
+
+[node name="platform_large17" parent="platforms" instance=ExtResource("3_4wyf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 198.187, -1.79428, 7.18821)
+
+[node name="platform_large19" parent="platforms" instance=ExtResource("3_4wyf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 204.212, -1.79428, 5.10111)
+
+[node name="platform_large20" parent="platforms" instance=ExtResource("3_4wyf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 204.212, -1.79428, -0.00696301)
+
+[node name="platform_large18" parent="platforms" instance=ExtResource("3_4wyf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 174.891, -1.79428, 13.3285)
 
 [node name="platform_small" parent="platforms" instance=ExtResource("5_71j4m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 103.735, -1.79141, 0)
@@ -139,3 +161,6 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 124.38
 
 [node name="platform_short_small19" parent="platforms" instance=ExtResource("5_qfnet")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 124.803, 0, 0)
+
+[node name="moving_platform" parent="." instance=ExtResource("9_7r4gi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 169.806, 0, -8.10906)
