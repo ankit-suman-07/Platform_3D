@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://droalic5tmyms"]
+[gd_scene load_steps=9 format=3 uid="uid://droalic5tmyms"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e3hbt"]
 albedo_color = Color(1, 0.31, 0.31, 1)
@@ -8,6 +8,18 @@ material = SubResource("StandardMaterial3D_e3hbt")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h72lv"]
 size = Vector3(1.20319, 1, 1.19653)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h72lv"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ovlsf"]
+material = SubResource("StandardMaterial3D_h72lv")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ovlsf"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_gyhdv"]
+material = SubResource("StandardMaterial3D_ovlsf")
+
+[sub_resource type="BoxMesh" id="BoxMesh_t0rx8"]
 
 [node name="StartFloor" type="StaticBody3D"]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0.114773)
@@ -19,3 +31,23 @@ mesh = SubResource("BoxMesh_e3hbt")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(5, 0, 0, 0, 2, 0, 0, 0, 5, 0.0102234, 0, 0.010376)
 shape = SubResource("BoxShape3D_h72lv")
+
+[node name="pillar" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.6, 0, 0, 0, 0.2, 2.89404, 1.60568, -0.69391)
+mesh = SubResource("CylinderMesh_ovlsf")
+
+[node name="pillar2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.6, 0, 0, 0, 0.2, 2.89404, 1.60568, 0.628269)
+mesh = SubResource("CylinderMesh_ovlsf")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.287255, 5.83657, 0, -1.80529, -0.928706, 0, 0, 0, 0.2, 0.104163, 1.45828, 2.88751)
+mesh = SubResource("PrismMesh_gyhdv")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.287255, 5.83657, 0, -1.80529, -0.928706, 0, 0, 0, 0.2, 0.104163, 1.45828, -2.90245)
+mesh = SubResource("PrismMesh_gyhdv")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.19, 0, 0, 0, 2, 0, 0, 0, 5.468, -2.90938, 2.01137, 0)
+mesh = SubResource("BoxMesh_t0rx8")

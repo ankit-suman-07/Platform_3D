@@ -16,14 +16,14 @@
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 16.352, -10.0209, 0)
 
 [node name="player" parent="." instance=ExtResource("2_rwgxs")]
-transform = Transform3D(-4.3068e-08, 0.170949, -0.98528, 7.47242e-09, 0.98528, 0.170949, 1, 0, -4.37114e-08, 32.7055, 2.29823, 0.0294237)
+transform = Transform3D(-4.3068e-08, 0.170949, -0.98528, 7.47242e-09, 0.98528, 0.170949, 1, 0, -4.37114e-08, 40.7135, 2.29823, 0.0294237)
 
 [node name="Camera3D" type="Camera3D" parent="player"]
 transform = Transform3D(1, -2.73915e-08, -9.64688e-09, 2.73915e-08, 0.779305, 0.626644, -9.64689e-09, -0.626644, 0.779305, 1.29526e-08, 2.88028, 2.32998)
 near = 1.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.999667, -0.00169484, 0.0257549, -0.0258106, -0.0656425, 0.997509, -6.11648e-09, -0.997842, -0.0656644, 55.8116, 27.5617, 0)
+transform = Transform3D(0.999667, -0.00169484, 0.0257549, -0.0258106, -0.0656425, 0.997509, -6.11648e-09, -0.997842, -0.0656644, 55.8116, 2.91496, 0)
 
 [node name="measure" parent="." instance=ExtResource("6_qfnet")]
 transform = Transform3D(2, 0, 0, 0, 0.5, 0, 0, 0, 2, 221.534, -0.716456, -0.745745)
