@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://1su8lk7tl852"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kahox"]
+albedo_color = Color(0.956863, 0.678431, 0.0901961, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_rwqht"]
+material = SubResource("StandardMaterial3D_kahox")
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_i64fm"]
+
+[node name="coin" type="Area3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.31134e-08, -0.02, 0, 0.3, -8.74228e-10, 0, 0, 0, 0.3, 0, 0, 0)
+mesh = SubResource("CylinderMesh_rwqht")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-1.31134e-08, -0.02, 0, 0.3, -8.74228e-10, 0, 0, 0, 0.3, 0, 0, 0)
+shape = SubResource("CylinderShape3D_i64fm")
