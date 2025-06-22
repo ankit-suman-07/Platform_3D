@@ -3,7 +3,7 @@ extends CharacterBody3D
 const SPEED := 5.0
 const GRAVITY := 9.8 * 4
 const JUMP_VELOCITY := 12
-const TURN_SPEED := 2.5  # radians per second
+const TURN_SPEED := 2  # radians per second
 
 var was_in_air := false  # ✅ New variable to track air state
 
