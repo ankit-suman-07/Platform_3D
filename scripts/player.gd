@@ -71,6 +71,10 @@ func _physics_process(delta: float) -> void:
 	velocity.z = direction.z * SPEED
 
 	move_and_slide()
+	
+	# ---- Check for Fall-Off ----
+	if global_position.y < -20.0:
+		get_tree().reload_current_scene()
 
 func _check_for_platform_impact() -> void:
 	for i in range(get_slide_collision_count()):
