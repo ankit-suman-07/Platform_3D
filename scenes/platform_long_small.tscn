@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://bjprtgdvxt81e"]
+[gd_scene load_steps=5 format=3 uid="uid://bjprtgdvxt81e"]
+
+[ext_resource type="Script" uid="uid://cairqflus67dq" path="res://scripts/platform_long_small.gd" id="1_jin41"]
+[ext_resource type="AudioStream" uid="uid://dq7h522xi372x" path="res://assets/sounds/concrete_sound.mp3" id="2_g3ryh"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_rqael"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jin41"]
 
 [node name="platform_long_small" type="StaticBody3D"]
+script = ExtResource("1_jin41")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 5, 0, 0, 0)
@@ -13,3 +17,8 @@ mesh = SubResource("BoxMesh_rqael")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 5, 0, 0, 0)
 shape = SubResource("BoxShape3D_jin41")
+
+[node name="LandOnLongPlatform" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_g3ryh")
+volume_db = -10.0
+pitch_scale = 0.8

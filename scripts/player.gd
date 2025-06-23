@@ -79,6 +79,13 @@ func _check_for_platform_impact() -> void:
 	for i in range(get_slide_collision_count()):
 		var collision := get_slide_collision(i)
 		var collider := collision.get_collider()
+		# ✅ Check if LandingSound node exists
+		if collider.has_node("LandOnLongPlatform"):
+			collider.get_node("LandOnLongPlatform").play()
+		if collider.has_node("LandOnGrill"):
+			collider.get_node("LandOnGrill").play()
+		if collider.has_node("LandOnMetalPlatform"):
+			collider.get_node("LandOnMetalPlatform").play()
 		if collider is StaticBody3D and collider.has_method("depress"):
 			collider.depress()
 			

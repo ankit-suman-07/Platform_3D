@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://cl7odbfax36xj"]
+[gd_scene load_steps=5 format=3 uid="uid://cl7odbfax36xj"]
+
+[ext_resource type="AudioStream" uid="uid://cmpfajgx553s7" path="res://assets/sounds/metal_sound.mp3" id="1_0i77r"]
+[ext_resource type="Script" uid="uid://wh4ejsd0637d" path="res://scripts/platform_small.gd" id="1_b66pd"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_8m8gs"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0i77r"]
 
 [node name="platform_small" type="StaticBody3D"]
+script = ExtResource("1_b66pd")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0)
@@ -13,3 +17,8 @@ mesh = SubResource("BoxMesh_8m8gs")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_0i77r")
+
+[node name="LandOnMetalPlatform" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("1_0i77r")
+volume_db = -10.0
+pitch_scale = 0.8

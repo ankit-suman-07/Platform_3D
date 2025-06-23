@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://ftc6nrelfs1y"]
+[gd_scene load_steps=5 format=3 uid="uid://ftc6nrelfs1y"]
+
+[ext_resource type="Script" uid="uid://gy84265p6k4g" path="res://scripts/platform_short_small.gd" id="1_iga2n"]
+[ext_resource type="AudioStream" uid="uid://b5o6yijiwe215" path="res://assets/sounds/grill_sound.mp3" id="2_pnniw"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ykoxm"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iga2n"]
 
 [node name="platform_short_small" type="StaticBody3D"]
+script = ExtResource("1_iga2n")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
@@ -13,3 +17,8 @@ mesh = SubResource("BoxMesh_ykoxm")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 shape = SubResource("BoxShape3D_iga2n")
+
+[node name="LandOnGrill" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_pnniw")
+volume_db = -10.0
+pitch_scale = 0.8
