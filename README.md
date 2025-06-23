@@ -1,10 +1,26 @@
-# PLATFORMS-3D
+# 🎮 PLATFORMS-3D 
 ### 3D Platformer game made in Godot 4.4
 
-# 🎮 List of Features
+## 💻 Setup locally
+
+**Prerequisites** :
+- Git 
+- Godot 4.4
+
+**Step 1:** Clone the repository
+```
+git clone https://github.com/ankit-suman-07/Platform_3D.git
+```
+
+**Step 2:** Open Godot
+```
+In godot editor, click open a new project and browse to the cloned repository folder and select.
+```
+
+# 🚀 Features
 
 ## 🏁 Core Gameplay
-- 👟 **3D Movement**: Smooth character controls (walk, run, and jump).
+- 👟 **3D Movement**: Smooth character controls (walk and jump).
 - ⤴️ **Mouse Look**: Rotate the view with the mouse for easy exploration.
 - 🪂 **Platforming Action**: Includes static platforms, moving platforms, and special surfaces:
   - Stone
@@ -21,14 +37,14 @@
 ## ⚡️ Additional Mechanics
 - 🚶‍♂️ **Moving Platforms**: Challenging platforms that move smoothly.
 - 🔊 **Platform Landing Sound**: Plays when the player lands on certain platforms.
-- 💥 **Game Over State**: Landing in certain areas triggers a scene change to the Game Over screen.
-- ⏳ **Pause System**: Supports pausing the game (extendable with a menu).
+- 💥 **Game Over State**: Landing on a certain platform triggers a scene change to the Game Over screen.
+- ⏳ **In-game Quit System**: Supports quitting the game during the game that changes scene to Main Menu screen.
 - 👻 **Fall-Off Detection**: Player resets when falling too far.
-- 🎯 **Platform Impact Check**: Certain platforms can respond when landed upon (depression or special effects).
+- 🎯 **Platform Impact Check**: Certain platforms can respond when landed upon (depresses a bit).
 
 ## 👁️ Visual & Audio Features
 - 🌅 **Eye-Friendly Mouse Look**: Smooth camera pitch and mouse-based direction controls.
-- 🔈 **Global Sound Management**: Sounds are organized and reliably triggered.
+- 🔈 **Sound Management**: Sounds are organized and reliably triggered.
 - 🖌️ **Material Variety**: Multiple platform materials:
   - Stone
   - Wood
@@ -43,26 +59,7 @@
 - 💥 **Scene Management**: Smooth scene changes for Game Over or Main Menu screens.
 
 
-
-### Setup locally
----
-
-**Prerequisites** :
-- Git 
-- Godot 4.4
-
-**Step 1:** Clone the repository
-```
-git clone https://github.com/ankit-suman-07/Platform_3D.git
-```
-
-**Step 2:** Open Godot
-```
-In godot editor, click open a new project and browse to the cloned repository folder and select.
-```
-
-### Project screenshots & GamePlay
----
+## 🕹️ Screenshots & GamePlay
 
 **Game Video**
 [![Video Title](/screen_captures/game_start.png)](https://www.youtube.com/watch?v=yvoRzs2rXrQ)
