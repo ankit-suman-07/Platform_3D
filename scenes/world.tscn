@@ -20,7 +20,7 @@ script = ExtResource("1_q5onr")
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 16.352, -10.0209, 0)
 
 [node name="player" parent="." instance=ExtResource("2_rwgxs")]
-transform = Transform3D(-4.3068e-08, 0.170949, -0.98528, 7.47242e-09, 0.98528, 0.170949, 1, 0, -4.37114e-08, 213.899, 2.29823, 0.0294237)
+transform = Transform3D(-4.3068e-08, 0.170949, -0.98528, 7.47242e-09, 0.98528, 0.170949, 1, 0, -4.37114e-08, 202.233, 3.62568, 0.0294237)
 
 [node name="Camera3D" type="Camera3D" parent="player"]
 transform = Transform3D(1, -2.73915e-08, -9.64688e-09, 2.73915e-08, 0.779305, 0.626644, -9.64689e-09, -0.626644, 0.779305, 1.29526e-08, 2.88028, 2.32998)
