@@ -11,7 +11,6 @@ var was_in_air := false
 
 @onready var sfx_node = $JumpDropSound
 @onready var sfx_node_die = $GameOverSound
-#var jump_sound = preload("res://assets/sounds/drop_sound.mp3") # or .ogg
 @onready var shadow_node = $ShadowMesh
 @onready var camera_node = $Camera3D
 
@@ -19,7 +18,6 @@ var camera_pitch := 0.0
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	#sfx_node.stream = jump_sound
 
 func _unhandled_input(event) -> void:
 	if event is InputEventMouseMotion:
@@ -72,15 +70,13 @@ func _physics_process(delta: float) -> void:
 	if global_position.y < -30.0:
 		Global.score = 0
 		get_tree().reload_current_scene()
-	#if global_position.y < -5.0:
-		#if sfx_node:
-			#sfx_node_die.play()
+
 
 func _check_for_platform_impact() -> void:
 	for i in range(get_slide_collision_count()):
 		var collision := get_slide_collision(i)
 		var collider := collision.get_collider()
-		# ✅ Check if LandingSound node exists
+		# Check if different node exists and play the sound accordingly
 		if collider.has_node("LandOnLongPlatform"):
 			collider.get_node("LandOnLongPlatform").play()
 		if collider.has_node("LandOnGrill"):
@@ -92,9 +88,7 @@ func _check_for_platform_impact() -> void:
 		if collider.has_node("MovingPlatformSound"):
 			collider.get_node("MovingPlatformSound").play()
 		if collider is StaticBody3D and collider.has_method("depress"):
-			collider.depress()
-			
-			# ✅ Play sound effect when the player lands
+			collider.depress()			
 			if sfx_node:
 				sfx_node.play()
 

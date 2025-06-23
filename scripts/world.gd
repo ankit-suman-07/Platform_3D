@@ -4,7 +4,7 @@ extends Node3D
 @onready var score_label = $CanvasLayer/ScoreLabel
 
 func _ready() -> void:
-	sfx_node_start.play() # ✅ This will play the sound
+	sfx_node_start.play()
 
 func _process(delta: float) -> void:
 	score_label.text = "Score : " + str(Global.score)

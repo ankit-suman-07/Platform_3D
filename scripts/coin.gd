@@ -5,9 +5,9 @@ extends Area3D
 func _on_body_entered(body: Node3D) -> void:
 	if body.name == "player": # Or is_in_group("player")
 		Global.score += 1
-		print("Player hits coin: " + str(Global.score))
 		sfx_coin.play()
 		$MeshInstance3D.visible = false
 		$CollisionShape3D.disabled = true
-		await get_tree().create_timer(0.5).timeout # wait for sound
+		# wait for 1 sound
+		await get_tree().create_timer(0.5).timeout 
 		queue_free()

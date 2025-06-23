@@ -1,4 +1,3 @@
-# Platform.gd
 extends StaticBody3D
 
 @export var depress_amount: float = 1.0          # Distance platform goes down
@@ -21,7 +20,7 @@ func _process(delta: float) -> void:
 
 func depress() -> void:
 	if depressed:
-		return  # ✅ Prevent re-triggering
+		return  # Prevent re-triggering
 	depressed = true
 	target_position = original_position + Vector3(0, -depress_amount, 0)
 
