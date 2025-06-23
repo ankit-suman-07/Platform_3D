@@ -1,0 +1,260 @@
+[gd_scene load_steps=4 format=3 uid="uid://di81luhjpswux"]
+
+[ext_resource type="Script" uid="uid://c5nyxqd5igrrd" path="res://scripts/controls.gd" id="1_cywyo"]
+[ext_resource type="FontFile" uid="uid://d0gb1phgr8gkj" path="res://assets/fonts/04b_30/04B_30__.TTF" id="1_i2gav"]
+[ext_resource type="FontFile" uid="uid://bw2xa6oc1vwwd" path="res://assets/fonts/chonky_bunny/Chonky Bunny.ttf" id="2_5tddo"]
+
+[node name="Controls" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cywyo")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 111.0
+grow_horizontal = 2
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_i2gav")
+theme_override_font_sizes/font_size = 36
+text = "Controls"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -76.0
+offset_right = 97.0
+offset_bottom = -30.0
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.890196, 0.32549, 0, 0.854902)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_5tddo")
+theme_override_font_sizes/font_size = 36
+text = "Back"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 465.0
+offset_top = 146.0
+offset_right = 538.0
+offset_bottom = 172.0
+theme_override_fonts/font = ExtResource("2_5tddo")
+theme_override_font_sizes/font_size = 24
+text = "Forward"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 601.0
+offset_top = 141.0
+offset_right = 674.0
+offset_bottom = 174.0
+theme_override_fonts/font = ExtResource("2_5tddo")
+theme_override_font_sizes/font_size = 24
+text = "W or ↑"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 146.0
+offset_right = 601.0
+offset_bottom = 169.0
+theme_override_fonts/font = ExtResource("1_i2gav")
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 465.0
+offset_top = 207.0
+offset_right = 538.0
+offset_bottom = 233.0
+theme_override_fonts/font = ExtResource("2_5tddo")
+theme_override_font_sizes/font_size = 24
+text = "Back"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 0
+offset_left = 601.0
+offset_top = 202.0
+offset_right = 674.0
+offset_bottom = 235.0
+theme_override_fonts/font = ExtResource("2_5tddo")
+theme_override_font_sizes/font_size = 24
+text = "S or ↓"
+
+[node name="Label7" type="Label" parent="."]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 207.0
+offset_right = 601.0
+offset_bottom = 230.0
+theme_override_fonts/font = ExtResource("1_i2gav")
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label8" type="Label" parent="."]
+layout_mode = 0
+offset_left = 465.0
+offset_top = 271.0
+offset_right = 538.0
+offset_bottom = 297.0
+theme_override_fonts/font = ExtResource("2_5tddo")
+theme_override_font_sizes/font_size = 24
+text = "Right"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Label9" type="Label" parent="."]
+layout_mode = 0
+offset_left = 601.0
+offset_top = 266.0
+offset_right = 674.0
+offset_bottom = 299.0
+theme_override_fonts/font = ExtResource("2_5tddo")
+theme_override_font_sizes/font_size = 24
+text = "D or →"
+
+[node name="Label10" type="Label" parent="."]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 271.0
+offset_right = 601.0
+offset_bottom = 294.0
+theme_override_fonts/font = ExtResource("1_i2gav")
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label11" type="Label" parent="."]
+layout_mode = 0
+offset_left = 465.0
+offset_top = 335.0
+offset_right = 538.0
+offset_bottom = 361.0
+theme_override_fonts/font = ExtResource("2_5tddo")
+theme_override_font_sizes/font_size = 24
+text = "Left"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Label12" type="Label" parent="."]
+layout_mode = 0
+offset_left = 601.0
+offset_top = 330.0
+offset_right = 674.0
+offset_bottom = 363.0
+theme_override_fonts/font = ExtResource("2_5tddo")
+theme_override_font_sizes/font_size = 24
+text = "A or ←"
+
+[node name="Label13" type="Label" parent="."]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 335.0
+offset_right = 601.0
+offset_bottom = 358.0
+theme_override_fonts/font = ExtResource("1_i2gav")
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label14" type="Label" parent="."]
+layout_mode = 0
+offset_left = 465.0
+offset_top = 399.0
+offset_right = 538.0
+offset_bottom = 425.0
+theme_override_fonts/font = ExtResource("2_5tddo")
+theme_override_font_sizes/font_size = 24
+text = "Jump"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Label15" type="Label" parent="."]
+layout_mode = 0
+offset_left = 601.0
+offset_top = 394.0
+offset_right = 684.0
+offset_bottom = 427.0
+theme_override_fonts/font = ExtResource("2_5tddo")
+theme_override_font_sizes/font_size = 24
+text = "Spacebar"
+
+[node name="Label16" type="Label" parent="."]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 399.0
+offset_right = 601.0
+offset_bottom = 422.0
+theme_override_fonts/font = ExtResource("1_i2gav")
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label17" type="Label" parent="."]
+layout_mode = 0
+offset_left = 465.0
+offset_top = 463.0
+offset_right = 542.0
+offset_bottom = 489.0
+theme_override_fonts/font = ExtResource("2_5tddo")
+theme_override_font_sizes/font_size = 24
+text = "Direction"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Label18" type="Label" parent="."]
+layout_mode = 0
+offset_left = 601.0
+offset_top = 458.0
+offset_right = 744.0
+offset_bottom = 491.0
+theme_override_fonts/font = ExtResource("2_5tddo")
+theme_override_font_sizes/font_size = 24
+text = "Mouse Movement"
+
+[node name="Label19" type="Label" parent="."]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 463.0
+offset_right = 601.0
+offset_bottom = 486.0
+theme_override_fonts/font = ExtResource("1_i2gav")
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label20" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -126.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("1_i2gav")
+text = "Press ESC to view Mouse Pointer"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
