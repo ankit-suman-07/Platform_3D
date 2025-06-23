@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://r3bon2ohl2b7"]
+[gd_scene load_steps=19 format=3 uid="uid://r3bon2ohl2b7"]
 
 [ext_resource type="PackedScene" uid="uid://droalic5tmyms" path="res://scenes/start_floor.tscn" id="1_nnsk1"]
 [ext_resource type="Script" uid="uid://c3hmeugfkfngt" path="res://scripts/world.gd" id="1_q5onr"]
@@ -15,6 +15,24 @@
 [ext_resource type="FontFile" uid="uid://d0gb1phgr8gkj" path="res://assets/fonts/04b_30/04B_30__.TTF" id="13_o8fc1"]
 [ext_resource type="FontFile" uid="uid://bw2xa6oc1vwwd" path="res://assets/fonts/chonky_bunny/Chonky Bunny.ttf" id="14_xo05s"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o8fc1"]
+sky_horizon_color = Color(0.66035, 0.669906, 0.684971, 1)
+ground_bottom_color = Color(0.198103, 0.167327, 0.131587, 1)
+ground_horizon_color = Color(0.66035, 0.669906, 0.684971, 1)
+
+[sub_resource type="Sky" id="Sky_xo05s"]
+sky_material = SubResource("ProceduralSkyMaterial_o8fc1")
+
+[sub_resource type="Environment" id="Environment_dss4m"]
+background_mode = 2
+sky = SubResource("Sky_xo05s")
+tonemap_mode = 2
+glow_enabled = true
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.517809, 0.586447, 0.724137, 1)
+fog_density = 0.8
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dss4m"]
 content_margin_left = 20.0
 content_margin_top = 10.0
@@ -23,6 +41,9 @@ content_margin_bottom = 10.0
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_q5onr")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_dss4m")
 
 [node name="StartFloor" parent="." instance=ExtResource("1_nnsk1")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 16.352, -10.0209, 0)
