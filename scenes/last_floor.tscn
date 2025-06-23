@@ -1,4 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://d1xab202v53gc"]
+[gd_scene load_steps=8 format=3 uid="uid://d1xab202v53gc"]
+
+[ext_resource type="AudioStream" uid="uid://71cvhvho0rmc" path="res://assets/sounds/win_sound.mp3" id="1_c5h8u"]
+[ext_resource type="Script" uid="uid://boxsuisfk7t2v" path="res://scripts/last_floor.gd" id="1_j0i6g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5arst"]
 albedo_color = Color(0.823529, 0.729412, 0.164706, 0.988235)
@@ -15,6 +18,7 @@ albedo_color = Color(0.137255, 0.784314, 0.109804, 1)
 material = SubResource("StandardMaterial3D_c5h8u")
 
 [node name="last_floor" type="StaticBody3D"]
+script = ExtResource("1_j0i6g")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(2, 0, 0, 0, 0.5, 0, 0, 0, 2, 0, 0, 0)
@@ -25,7 +29,11 @@ transform = Transform3D(2, 0, 0, 0, 0.5, 0, 0, 0, 2, 0, 0, 0)
 shape = SubResource("CylinderShape3D_j0i6g")
 
 [node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.467055, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
-transform = Transform3D(0.005, 0, 0, 0, 0.353553, -0.353553, 0, 0.353553, 0.353553, 0.546844, 1.01348, 0)
+transform = Transform3D(0.005, 0, 0, 0, 0.494975, -0.494975, 0, 0.494975, 0.494975, -0.75146, 1.8216, 0)
 mesh = SubResource("BoxMesh_j0i6g")
+
+[node name="GameWonSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("1_c5h8u")

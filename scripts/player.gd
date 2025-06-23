@@ -86,6 +86,10 @@ func _check_for_platform_impact() -> void:
 			collider.get_node("LandOnGrill").play()
 		if collider.has_node("LandOnMetalPlatform"):
 			collider.get_node("LandOnMetalPlatform").play()
+		if collider.has_node("GameWonSound"):
+			collider.get_node("GameWonSound").play()
+		if collider.has_node("MovingPlatformSound"):
+			collider.get_node("MovingPlatformSound").play()
 		if collider is StaticBody3D and collider.has_method("depress"):
 			collider.depress()
 			
