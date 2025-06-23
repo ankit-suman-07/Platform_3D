@@ -8,6 +8,10 @@ const RAY_LENGTH := 100.0
 const MAX_LOOK_ANGLE := deg_to_rad(70)
 
 var was_in_air := false
+
+@onready var sfx_node = $JumpDropSound
+@onready var sfx_node_die = $GameOverSound
+#var jump_sound = preload("res://assets/sounds/drop_sound.mp3") # or .ogg
 @onready var shadow_node = $ShadowMesh
 @onready var camera_node = $Camera3D
 
@@ -15,6 +19,7 @@ var camera_pitch := 0.0
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	#sfx_node.stream = jump_sound
 
 func _unhandled_input(event) -> void:
 	if event is InputEventMouseMotion:
@@ -66,6 +71,9 @@ func _physics_process(delta: float) -> void:
 	# ---- Check for Fall-Off ----
 	if global_position.y < -30.0:
 		get_tree().reload_current_scene()
+	#if global_position.y < -5.0:
+		#if sfx_node:
+			#sfx_node_die.play()
 
 func _check_for_platform_impact() -> void:
 	for i in range(get_slide_collision_count()):
@@ -73,6 +81,10 @@ func _check_for_platform_impact() -> void:
 		var collider := collision.get_collider()
 		if collider is StaticBody3D and collider.has_method("depress"):
 			collider.depress()
+			
+			# ✅ Play sound effect when the player lands
+			if sfx_node:
+				sfx_node.play()
 
 func _process(delta: float) -> void:
 	var space_state = get_world_3d().direct_space_state
