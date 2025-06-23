@@ -5,7 +5,7 @@ const GRAVITY := 9.8 * 4
 const JUMP_VELOCITY := 12
 const MOUSE_SENSITIVITY := 0.001
 const RAY_LENGTH := 100.0
-const MAX_LOOK_ANGLE := deg_to_rad(70) # Prevent looking too far up or down
+const MAX_LOOK_ANGLE := deg_to_rad(70)
 
 var was_in_air := false
 @onready var shadow_node = $ShadowMesh
@@ -18,28 +18,18 @@ func _ready() -> void:
 
 func _unhandled_input(event) -> void:
 	if event is InputEventMouseMotion:
-		# Mouse look logic
+		# Mouse X rotates the player
 		rotation.y -= event.relative.x * MOUSE_SENSITIVITY
+		# Mouse Y rotates the camera pitch
 		camera_pitch = clamp(camera_pitch - event.relative.y * MOUSE_SENSITIVITY, -MAX_LOOK_ANGLE, MAX_LOOK_ANGLE)
 		camera_node.rotation.x = camera_pitch
 
 	if event is InputEventKey and event.pressed:
 		if event.keycode == KEY_ESCAPE:
 			if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
-			# Release mouse
 				Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			else:
-			# Exit the game
 				get_tree().quit()
-
-
-#func _unhandled_input(event) -> void:
-	#if event is InputEventMouseMotion:
-		## Mouse X -> Y rotation
-		#rotation.y -= event.relative.x * MOUSE_SENSITIVITY
-		## Mouse Y -> Camera pitch
-		#camera_pitch = clamp(camera_pitch - event.relative.y * MOUSE_SENSITIVITY, -MAX_LOOK_ANGLE, MAX_LOOK_ANGLE)
-		#camera_node.rotation.x = camera_pitch
 
 func _physics_process(delta: float) -> void:
 	# ---- Gravity ----
@@ -65,13 +55,14 @@ func _physics_process(delta: float) -> void:
 		direction += Vector3.RIGHT
 
 	direction = direction.normalized()
-	direction = global_transform.basis * direction
+	# Movement relative to the player’s rotation
+	direction = transform.basis * direction
 	direction.y = 0
 	velocity.x = direction.x * SPEED
 	velocity.z = direction.z * SPEED
 
 	move_and_slide()
-	
+
 	# ---- Check for Fall-Off ----
 	if global_position.y < -30.0:
 		get_tree().reload_current_scene()
