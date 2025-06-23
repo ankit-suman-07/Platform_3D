@@ -2,20 +2,16 @@
 
 [ext_resource type="AudioStream" uid="uid://71cvhvho0rmc" path="res://assets/sounds/win_sound.mp3" id="1_c5h8u"]
 [ext_resource type="Script" uid="uid://boxsuisfk7t2v" path="res://scripts/last_floor.gd" id="1_j0i6g"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5arst"]
-albedo_color = Color(0.823529, 0.729412, 0.164706, 0.988235)
+[ext_resource type="Material" uid="uid://gcxvygy3k7px" path="res://materials/mat_gem.tres" id="2_73gc4"]
+[ext_resource type="Material" uid="uid://dchhdeq25wyoo" path="res://materials/mat_final.tres" id="2_gj20a"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_c5h8u"]
-material = SubResource("StandardMaterial3D_5arst")
+material = ExtResource("2_gj20a")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_j0i6g"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c5h8u"]
-albedo_color = Color(0.137255, 0.784314, 0.109804, 1)
-
 [sub_resource type="BoxMesh" id="BoxMesh_j0i6g"]
-material = SubResource("StandardMaterial3D_c5h8u")
+material = ExtResource("2_73gc4")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_73gc4"]
 

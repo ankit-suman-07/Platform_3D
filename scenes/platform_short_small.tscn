@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://ftc6nrelfs1y"]
+[gd_scene load_steps=6 format=3 uid="uid://ftc6nrelfs1y"]
 
 [ext_resource type="Script" uid="uid://gy84265p6k4g" path="res://scripts/platform_short_small.gd" id="1_iga2n"]
+[ext_resource type="Material" uid="uid://cy5sbeu1l8wo4" path="res://materials/mat_grill.tres" id="2_fhlrf"]
 [ext_resource type="AudioStream" uid="uid://b5o6yijiwe215" path="res://assets/sounds/grill_sound.mp3" id="2_pnniw"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ykoxm"]
+material = ExtResource("2_fhlrf")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iga2n"]
 

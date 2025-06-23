@@ -1,18 +1,16 @@
 [gd_scene load_steps=9 format=3 uid="uid://droalic5tmyms"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e3hbt"]
-albedo_color = Color(1, 0.31, 0.31, 1)
+[ext_resource type="Material" uid="uid://d2guo07e5oo8d" path="res://materials/mat_start.tres" id="1_h72lv"]
+[ext_resource type="Material" uid="uid://dchhdeq25wyoo" path="res://materials/mat_final.tres" id="2_ovlsf"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_e3hbt"]
-material = SubResource("StandardMaterial3D_e3hbt")
+material = ExtResource("1_h72lv")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h72lv"]
 size = Vector3(1.20319, 1, 1.19653)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h72lv"]
-
 [sub_resource type="CylinderMesh" id="CylinderMesh_ovlsf"]
-material = SubResource("StandardMaterial3D_h72lv")
+material = ExtResource("2_ovlsf")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ovlsf"]
 

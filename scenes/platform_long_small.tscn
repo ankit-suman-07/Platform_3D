@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://bjprtgdvxt81e"]
+[gd_scene load_steps=6 format=3 uid="uid://bjprtgdvxt81e"]
 
 [ext_resource type="Script" uid="uid://cairqflus67dq" path="res://scripts/platform_long_small.gd" id="1_jin41"]
+[ext_resource type="Material" uid="uid://6rdmwsc44rig" path="res://materials/mat_wood.tres" id="2_6jb5y"]
 [ext_resource type="AudioStream" uid="uid://dq7h522xi372x" path="res://assets/sounds/concrete_sound.mp3" id="2_g3ryh"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_rqael"]
+material = ExtResource("2_6jb5y")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jin41"]
 
@@ -11,6 +13,10 @@
 script = ExtResource("1_jin41")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 5, 0, 0, 0)
+mesh = SubResource("BoxMesh_rqael")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 5, 0, 0, 0)
 mesh = SubResource("BoxMesh_rqael")
 

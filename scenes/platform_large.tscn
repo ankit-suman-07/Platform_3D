@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://dg8p11xsr1ecd"]
+[gd_scene load_steps=5 format=3 uid="uid://dg8p11xsr1ecd"]
 
 [ext_resource type="Script" uid="uid://dhqmolqfl2o86" path="res://scripts/platform.gd" id="1_h3deo"]
+[ext_resource type="Material" uid="uid://b8tmbmh3eeg3c" path="res://materials/mat_stone.tres" id="2_ka7w6"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_gu0fa"]
+lightmap_size_hint = Vector2i(14, 21)
+material = ExtResource("2_ka7w6")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h3deo"]
 
@@ -10,6 +13,10 @@
 script = ExtResource("1_h3deo")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(4, 0, 0, 0, 0.5, 0, 0, 0, 4, 0, 0, 0)
+mesh = SubResource("BoxMesh_gu0fa")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(4, 0, 0, 0, 0.5, 0, 0, 0, 4, 0, 0, 0)
 mesh = SubResource("BoxMesh_gu0fa")
 

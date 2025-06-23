@@ -3,11 +3,11 @@
 [ext_resource type="Script" uid="uid://bwntwkxh0cnsn" path="res://scripts/coin.gd" id="1_rwqht"]
 [ext_resource type="AudioStream" uid="uid://bvw1tr36v8l8" path="res://assets/sounds/coin_sound.mp3" id="2_i64fm"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kahox"]
-albedo_color = Color(0.956863, 0.678431, 0.0901961, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i64fm"]
+albedo_color = Color(1, 0.843137, 0, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_rwqht"]
-material = SubResource("StandardMaterial3D_kahox")
+material = SubResource("StandardMaterial3D_i64fm")
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_i64fm"]
 

@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dchhdeq25wyoo"]
+
+[ext_resource type="Texture2D" uid="uid://bml762bxky2qu" path="res://assets/texture/final_texture.webp" id="1_3dg1y"]
+
+[resource]
+albedo_color = Color(0.501961, 0.501961, 0.501961, 1)
+albedo_texture = ExtResource("1_3dg1y")
+metallic_texture_channel = 4

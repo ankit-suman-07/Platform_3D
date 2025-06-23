@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://6rdmwsc44rig"]
+
+[ext_resource type="Texture2D" uid="uid://cihh5ps44k6x1" path="res://assets/texture/wood_texture.jpg" id="1_h3f2e"]
+
+[resource]
+albedo_color = Color(0.501961, 0.501961, 0.501961, 1)
+albedo_texture = ExtResource("1_h3f2e")
+metallic_texture_channel = 4
+roughness = 0.52
