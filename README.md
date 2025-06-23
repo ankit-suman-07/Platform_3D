@@ -1,4 +1,4 @@
-# 🎮 PLATFORMS-3D 
+# 🐾 PLATFORMS-3D 
 ### 3D Platformer game made in Godot 4.4
 
 ## 💻 Setup locally
