@@ -15,6 +15,10 @@ run/main_scene="uid://r3bon2ohl2b7"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*res://Global.gd"
+
 [input]
 
 jump={

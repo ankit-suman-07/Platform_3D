@@ -4,6 +4,8 @@ extends Area3D
 
 func _on_body_entered(body: Node3D) -> void:
 	if body.name == "player": # Or is_in_group("player")
+		Global.score += 1
+		print("Player hits coin: " + str(Global.score))
 		sfx_coin.play()
 		$MeshInstance3D.visible = false
 		$CollisionShape3D.disabled = true
