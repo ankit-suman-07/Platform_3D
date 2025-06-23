@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 const SPEED := 4.0
 const GRAVITY := 9.8 * 4
-const JUMP_VELOCITY := 12
+const JUMP_VELOCITY := 14
 const MOUSE_SENSITIVITY := 0.001
 const RAY_LENGTH := 100.0
 const MAX_LOOK_ANGLE := deg_to_rad(70)

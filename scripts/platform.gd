@@ -1,8 +1,8 @@
 # Platform.gd
 extends StaticBody3D
 
-@export var depress_amount: float = 1.5          # Distance platform goes down
-@export var depress_speed: float = 5.0            # Speed when going down
+@export var depress_amount: float = 1.0          # Distance platform goes down
+@export var depress_speed: float = 4.0            # Speed when going down
 @export var recover_speed: float = 2.0            # Speed when coming back up
 
 var original_position: Vector3
