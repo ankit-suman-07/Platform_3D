@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="PLATFORM_3D"
-run/main_scene="uid://r3bon2ohl2b7"
+run/main_scene="uid://cnrdpkth2gw48"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 

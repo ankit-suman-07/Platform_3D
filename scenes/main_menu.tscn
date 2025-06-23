@@ -1,4 +1,15 @@
-[gd_scene format=3 uid="uid://cnrdpkth2gw48"]
+[gd_scene load_steps=6 format=3 uid="uid://cnrdpkth2gw48"]
+
+[ext_resource type="Script" uid="uid://b5jr1jkb8bcdq" path="res://scripts/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="FontFile" uid="uid://bw2xa6oc1vwwd" path="res://assets/fonts/chonky_bunny/Chonky Bunny.ttf" id="1_l6cm7"]
+[ext_resource type="FontFile" uid="uid://d0gb1phgr8gkj" path="res://assets/fonts/04b_30/04B_30__.TTF" id="2_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://7t5isx0b8q4k" path="res://assets/images/bg.jpg" id="2_wu84c"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bqqt6"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -7,10 +18,80 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_bqqt6")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(0.223103, 0.223103, 0.223103, 1)
+layout_mode = 0
+offset_left = -14.0
+offset_top = -60.0
+offset_right = 1906.0
+offset_bottom = 1020.0
+scale = Vector2(0.62748, 0.668437)
+texture = ExtResource("2_wu84c")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 53.0
+offset_top = -237.0
+offset_right = 239.0
+offset_bottom = -55.0
+grow_vertical = 0
+alignment = 1
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.890196, 0.32549, 0, 0.854902)
+theme_override_constants/outline_size = 10
+theme_override_constants/h_separation = 10
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bqqt6")
+text = "Start Game"
+
+[node name="Controls" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.890196, 0.32549, 0, 0.854902)
+theme_override_constants/outline_size = 10
+theme_override_constants/h_separation = 10
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bqqt6")
+text = "Controls"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.890196, 0.32549, 0, 0.854902)
+theme_override_constants/outline_size = 10
+theme_override_constants/h_separation = 10
+theme_override_fonts/font = ExtResource("1_l6cm7")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bqqt6")
+text = "Exit
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
+offset_top = 67.0
+offset_bottom = 147.0
 grow_horizontal = 2
-alignment = 1
+theme_override_constants/outline_size = 50
+theme_override_fonts/font = ExtResource("2_ekxnf")
+theme_override_font_sizes/font_size = 64
+text = "PLATFORMS-3D"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
