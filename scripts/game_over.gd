@@ -5,6 +5,7 @@ extends Control
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	score_label.text = "Score : " + str(Global.score)
+	Global.score = 0
 
 
 func _on_main_menu_pressed() -> void:

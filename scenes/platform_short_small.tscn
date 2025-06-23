@@ -20,5 +20,5 @@ shape = SubResource("BoxShape3D_iga2n")
 
 [node name="LandOnGrill" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("2_pnniw")
-volume_db = -10.0
-pitch_scale = 0.8
+volume_db = -20.0
+pitch_scale = 0.6

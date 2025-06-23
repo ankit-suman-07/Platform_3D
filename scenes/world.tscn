@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://r3bon2ohl2b7"]
+[gd_scene load_steps=16 format=3 uid="uid://r3bon2ohl2b7"]
 
 [ext_resource type="PackedScene" uid="uid://droalic5tmyms" path="res://scenes/start_floor.tscn" id="1_nnsk1"]
 [ext_resource type="Script" uid="uid://c3hmeugfkfngt" path="res://scripts/world.gd" id="1_q5onr"]
@@ -12,6 +12,14 @@
 [ext_resource type="PackedScene" uid="uid://1su8lk7tl852" path="res://scenes/coin.tscn" id="10_e3hyu"]
 [ext_resource type="PackedScene" uid="uid://d1xab202v53gc" path="res://scenes/last_floor.tscn" id="10_w7kh3"]
 [ext_resource type="AudioStream" uid="uid://c1p2tor4iggdd" path="res://assets/sounds/game_start.mp3" id="11_e3hyu"]
+[ext_resource type="FontFile" uid="uid://d0gb1phgr8gkj" path="res://assets/fonts/04b_30/04B_30__.TTF" id="13_o8fc1"]
+[ext_resource type="FontFile" uid="uid://bw2xa6oc1vwwd" path="res://assets/fonts/chonky_bunny/Chonky Bunny.ttf" id="14_xo05s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dss4m"]
+content_margin_left = 20.0
+content_margin_top = 10.0
+content_margin_right = 20.0
+content_margin_bottom = 10.0
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_q5onr")
@@ -20,14 +28,19 @@ script = ExtResource("1_q5onr")
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 16.352, -10.0209, 0)
 
 [node name="player" parent="." instance=ExtResource("2_rwgxs")]
-transform = Transform3D(-4.3068e-08, 0.170949, -0.98528, 7.47242e-09, 0.98528, 0.170949, 1, 0, -4.37114e-08, 202.233, 3.62568, 0.0294237)
+transform = Transform3D(-4.3068e-08, 0.170949, -0.98528, 7.47242e-09, 0.98528, 0.170949, 1, 0, -4.37114e-08, 38.842, 2.8385, 0.0294237)
 
 [node name="Camera3D" type="Camera3D" parent="player"]
-transform = Transform3D(1, -2.73915e-08, -9.64688e-09, 2.73915e-08, 0.779305, 0.626644, -9.64689e-09, -0.626644, 0.779305, 1.29526e-08, 2.88028, 2.32998)
+transform = Transform3D(1, -2.17472e-08, -5.79381e-09, 2.17473e-08, 0.867453, 0.497519, -5.79384e-09, -0.497519, 0.867453, 3.91155e-08, 2.53654, 2.82347)
+fov = 78.6588
 near = 1.0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.815522, -0.0380017, 0.577477, -0.571111, 0.108495, 0.813671, -0.0935743, -0.993371, 0.0667767, 55.8116, 27.5617, 0)
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.799695, 0.15255, -0.580703, -0.570417, 0.108813, 0.814116, 0.187381, 0.982287, -2.53833e-08, 4.75451, 6.38248, 0)
+shadow_enabled = true
 
 [node name="platforms" type="Node" parent="."]
 
@@ -429,3 +442,43 @@ transform = Transform3D(1, 0, 0, 0, -5.96046e-08, -1, 0, 1, -5.96046e-08, 210.21
 [node name="GameStartSound" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("11_e3hyu")
 volume_db = 32.857
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer"]
+offset_left = 28.0
+offset_top = 32.0
+offset_right = 93.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("13_o8fc1")
+theme_override_font_sizes/font_size = 24
+text = "Score : 0"
+
+[node name="PausePanel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 442.0
+offset_top = 4.0
+offset_right = 442.0
+offset_bottom = 4.0
+grow_horizontal = 2
+
+[node name="Exit" type="Button" parent="CanvasLayer/PausePanel"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 14.0
+offset_right = 99.0
+offset_bottom = 72.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.890196, 0.32549, 0, 0.854902)
+theme_override_constants/outline_size = 10
+theme_override_constants/h_separation = 10
+theme_override_fonts/font = ExtResource("14_xo05s")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxEmpty_dss4m")
+text = "Quit
+"
+
+[connection signal="pressed" from="CanvasLayer/PausePanel/Exit" to="." method="_on_exit_pressed"]

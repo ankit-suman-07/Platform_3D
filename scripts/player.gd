@@ -70,6 +70,7 @@ func _physics_process(delta: float) -> void:
 
 	# ---- Check for Fall-Off ----
 	if global_position.y < -30.0:
+		Global.score = 0
 		get_tree().reload_current_scene()
 	#if global_position.y < -5.0:
 		#if sfx_node:
